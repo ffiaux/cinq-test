@@ -24,7 +24,7 @@ Projeto
 
 Página
 
-1 - Uma página html simples, com jquery, um dialog com campo de texto e botão para enviar a mensagem
+1 - Uma página html simples, com jquery, um dialog com campo de texto e botão para enviar a mensagem. Dentro de WEB-INF, msgpost.html
 
 Execução 
 
