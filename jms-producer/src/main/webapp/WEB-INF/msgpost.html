@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JMS Producer - Consumer with Apache KAFKA</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+</head>
+<body>
+  <div id="dialog" title="Message dialog">
+	<input type="text" id="msg" name="msg" placeholder="Message to send...">
+	<p id='resposta' style='display: none;'>Message sent!</p>
+  </div>
+  <script>
+	$(function() 
+	{
+		dialog = $( "#dialog" ).dialog
+		({
+			autoOpen: true,
+			height: 300,
+			width: 350,
+			modal: true,
+			buttons: 
+			{
+				"Send message": function() 
+				{
+					var posting = $.post( "http://localhost:8080/greet/sendMsg/" + $("#msg").val());
+					$("#resposta").fadeIn("slow").delay(1500).fadeOut("fast");
+				}
+			}
+		});
+	});
+</script> 
+</body>
+</html>

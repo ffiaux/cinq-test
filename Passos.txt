@@ -1,0 +1,37 @@
+Fernando Fiaux de Moraes - ffiaux@gmail.com
+Meus passos no teste
+
+Projeto
+
+1 - Baixei o projeto e compilei com o maven, para baixar suas dependencias
+2 - Executei através o war do producer via spring boot para testar
+3 - Executei o jar do consumer para testar
+
+Middleware
+
+1 - Escolhi o kafka como middleware
+2 - Start no zookeeper
+3 - Start no kafka server
+4 - Detalhe importante, para funcionar corretamente, precisei descomentar uma configuração do arquivo server.properties, segue:
+# Hostname the broker will bind to. If not set, the server will bind to all interfaces
+host.name=localhost
+5 - Primeiro teste com o producer e consumer que é disponibilizado pelo kafka
+
+Projeto
+
+4 - Configurei as dependencias do kafka nos pom.xml (producer e consumer)
+5 - Alterei os códigos do producer e consumer para terem a configuração necessária para utilizarem o kafka como middleware, respeitando a implementação original
+
+Página
+
+1 - Uma página html simples, com jquery, um dialog com campo de texto e botão para enviar a mensagem
+
+Execução 
+
+1 - Start no zookeeper
+2 - Start no kafka server
+3 - Executar producer.war
+4 - Executar consumer.jar
+5 - Abrir no browser a página msgpost.html e enviar a mensagem
+
+*** Observação importante, reparei no firebug uma mensagem sobre requisição cross-origin bloqueada, e já havia lido antes no site do spring sobre utilizar @CrossOrigin(origins = "http://localhost:9000"), porém, não consegui fazer funcionar corretamente. Apenas quero registrar que estava ciente.
