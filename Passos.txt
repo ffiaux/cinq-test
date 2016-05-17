@@ -30,8 +30,9 @@ Execução
 
 1 - Start no zookeeper
 2 - Start no kafka server
-3 - Executar producer.war
-4 - Executar consumer.jar
+3 - Executar java -jar producer.war
+4 - Executar java -jar consumer-with-dependencies.jar
 5 - Abrir no browser a página msgpost.html e enviar a mensagem
+6 - Coloquei prints para sair nas janelas de prompt do windows onde se executam o producer e consumer
 
 *** Observação importante, reparei no firebug uma mensagem sobre requisição cross-origin bloqueada, e já havia lido antes no site do spring sobre utilizar @CrossOrigin(origins = "http://localhost:9000"), porém, não consegui fazer funcionar corretamente. Apenas quero registrar que estava ciente.
